@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  hello:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - run:
+          name: say hi
+          command: echo "hello from r29 minimal"
+workflows:
+  main:
+    jobs:
+      - hello
